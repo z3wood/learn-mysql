@@ -418,6 +418,23 @@ on 连接条件
 全外：full [outer]
 交叉连接: cross
 */
+# mysql本身不支持全外连接，不过可以通过union来实现全外连接
+select * 
+from students s 
+left join score c 
+on s.name = c.name 
+union 
+select * 
+from students s 
+right join score c 
+on s.name = c.name;
+# 等价于
+/*
+select * 
+from students s 
+full join score c 
+on s.name = c.name 
+*/
 ```
 
 ![join1](imgs/join1.png)
