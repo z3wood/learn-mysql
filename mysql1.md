@@ -131,7 +131,9 @@ alter table 表名 modify 列名 类型 约束;
 drop table 表名;
 
 # 查看表结构
+describe 表名;
 desc 表名;
+show columns from 表名;
 ```
 
 ### MySQL-CRUD增删改查操作
