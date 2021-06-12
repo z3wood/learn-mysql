@@ -82,8 +82,12 @@ sudo service mysql restart
 ### MySQL登入登出客户端操作
 
 ```bash
-# 登录mysql root是用户名
+# 登录mysql root是用户名 默认没有密码
 mysql -uroot -p
+
+# 登陆进去以后可以按如下方式修改密码
+USE mysql;
+ALTER user 'root'@'localhost' IDENTIFIED BY '新密码';
 
 # 显示当前时间
 select now();
